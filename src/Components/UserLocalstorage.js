@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./UserLocalstorage.css";
+import "./Components.css";
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from "react-router-dom";
@@ -27,10 +27,10 @@ function UserLocalstorage() {
                 <div>
                     <Container className="center">
                         <Card style={{ width: '18rem' }}>
-                            <Card.Body>
+                            <Card.Body style={{ backgroundColor: '#1976d2' }}>
                                 <form onSubmit={handleSubmit}>
                                     <div>
-                                        <input placeholder="Username"  type="text" value={username} onChange={onChangeUsername} />
+                                        <input minlength="3" placeholder="Username"  type="text" value={username} onChange={onChangeUsername} />
                                     </div>
                                     <br/>
                                     <button>Log in</button>
@@ -40,8 +40,6 @@ function UserLocalstorage() {
                     </Container>
                 </div>
             </div>
-
-
         </>
     );
 }
